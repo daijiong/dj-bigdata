@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>dj-bigdata</artifactId>
+        <groupId>org.djflying</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bigdata-rpc</artifactId>
+    <packaging>pom</packaging>
+
+    <name>bigdata rpc</name>
+    <url>http://maven.apache.org</url>
+    <description>bigdata rpc</description>
+
+    <modules>
+        <module>bigdata-rpc-common</module>
+        <module>bigdata-rpc-client</module>
+        <module>bigdata-rpc-registry</module>
+        <module>bigdata-rpc-server</module>
+        <module>bigdata-rpc-sample</module>
+    </modules>
+
+
+</project>

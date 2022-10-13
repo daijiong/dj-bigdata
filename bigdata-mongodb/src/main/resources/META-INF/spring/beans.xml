@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Configures the Camel Context-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       ">
+    <bean name="mongoConnection" class="babymongodb.connection.MongoConnection">
+        <constructor-arg name="host" value="10.101.44.200"/>
+        <constructor-arg name="port" value="27017"/>
+        <!--<constructor-arg name="host" value="10.100.174.33"/>-->
+        <!--<constructor-arg name="port" value="15000"/>-->
+        <!--<constructor-arg name="addresses" ref="addressList"/>-->
+        <!--<constructor-arg name="addressesStr" value="10.100.174.33:15000;10.100.174.36:15000;10.100.174.49:15000;"/>-->
+        <!--<constructor-arg name="userName" value="TCFlyIntDataAggregateStorage"/>-->
+        <!--<constructor-arg name="password" value="RQLLMHUFspOGjFGkLu2d"/>-->
+        <!--<constructor-arg name="databaseName" value="TCFlyIntDataAggregateStorage"/>-->
+    </bean>
+
+    <bean name="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongo" ref="mongoConnection"/>
+        <constructor-arg name="databaseName" value="bookvalidate"/>
+    </bean>
+
+
+    <!--<bean id="addressList" class="java.util.ArrayList">-->
+    <!--<constructor-arg>-->
+    <!--<list>-->
+    <!--<bean class="com.mongodb.ServerAddress" >-->
+    <!--<constructor-arg name="host" value="10.100.174.33"/>-->
+    <!--<constructor-arg name="port" value="15000"/>-->
+    <!--</bean>-->
+    <!--<bean class="com.mongodb.ServerAddress" >-->
+    <!--<constructor-arg name="host" value="10.100.174.36"/>-->
+    <!--<constructor-arg name="port" value="15000"/>-->
+    <!--</bean>-->
+    <!--<bean class="com.mongodb.ServerAddress" >-->
+    <!--<constructor-arg name="host" value="10.100.174.49"/>-->
+    <!--<constructor-arg name="port" value="15000"/>-->
+    <!--</bean>-->
+
+    <!--</list>-->
+    <!--</constructor-arg>-->
+    <!--</bean>-->
+</beans>
